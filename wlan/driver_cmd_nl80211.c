@@ -23,7 +23,9 @@
 
 #define MAX_WPSP2PIE_CMD_SIZE		512
 
+#ifndef os_strncpy
 #define os_strncpy strncpy
+#ifdef
 
 typedef struct android_wifi_priv_cmd {
 	char *buf;
