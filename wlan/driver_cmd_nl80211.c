@@ -25,7 +25,7 @@
 
 #ifndef os_strncpy
 #define os_strncpy strncpy
-#ifdef
+#endif
 
 typedef struct android_wifi_priv_cmd {
 	char *buf;
