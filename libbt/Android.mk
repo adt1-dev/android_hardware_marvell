@@ -13,13 +13,15 @@ LOCAL_SRC_FILES := \
 LOCAL_C_INCLUDES += \
         $(LOCAL_PATH)/include \
         $(BDROID_DIR)/hci/include \
-        hardware/marvell/wlan/mrvl/libMarvellWireless
 
 LOCAL_SHARED_LIBRARIES := \
-        libcutils \
-        libMarvellWireless
+        libcutils
  
+ifneq ($(MRVL_WIRELESS_DAEMON_API),)
 LOCAL_CFLAGS += -DMRVL_WIRELESS_DAEMON_API
+LOCAL_C_INCLUDES += hardware/marvell/wlan/libMarvellWireless
+LOCAL_SHARED_LIBRARIES += libMarvellWireless
+endif
 
 LOCAL_MODULE := libbt-vendor
 LOCAL_MODULE_TAGS := optional
