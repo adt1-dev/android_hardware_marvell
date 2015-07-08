@@ -468,3 +468,14 @@ void bt_vnd_mrvl_if_cleanup(void)
 	return;
 }
 
+int bluetooth_enable(void)
+{
+	// Dummy function for now.
+	return 0;
+}
+
+int bluetooth_disable(void)
+{
+	// Dummy function for now.
+	return 0;
+}
