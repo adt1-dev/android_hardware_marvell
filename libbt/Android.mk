@@ -4,7 +4,7 @@ ifeq ($(BOARD_HAVE_BLUETOOTH_MRVL),true)
 
 include $(CLEAR_VARS)
 
-BDROID_DIR := $(TOP_DIR)external/bluetooth/bluedroid
+BDROID_DIR := $(TOP_DIR)system/bt
 
 LOCAL_SRC_FILES := \
         src/bt_vendor_mrvl.c \
